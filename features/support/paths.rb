@@ -12,6 +12,9 @@ module NavigationHelpers
     when /^página inicial$/
       root_path
 
+      when /^página das tarefas$/
+      tarefas_path
+
 
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:

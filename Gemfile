@@ -6,7 +6,7 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem "twitter-bootstrap-rails"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,12 +22,14 @@ end
 
 group :test, :development do
   gem 'ruby-debug19'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'pry'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'capybara'
 end
