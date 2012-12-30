@@ -26,12 +26,15 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'pry'
-  gem 'cucumber'
-  gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'capybara'
+end
+
+group :test do
+  gem 'cucumber'
+  gem 'cucumber-rails'
 end
 
 gem 'jquery-rails'
