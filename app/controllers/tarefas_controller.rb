@@ -2,7 +2,7 @@
 class TarefasController < ApplicationController
 
   def index
-    @tarefas = Tarefa.all
+    @tarefas = Tarefa.all(:order => "finalizada")
   end
 
   def new
