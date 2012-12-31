@@ -1,0 +1,27 @@
+<p>
+  <% if @tarefa.errors.any? %>
+    <ul>
+      <% @tarefa.errors.each do |attr, msg| %>
+          <li><%= msg %></li>
+      <% end %>
+    </ul>
+<% end %>
+</p>
+
+<h2>Atualize aqui a sua tarefa!</h2>
+
+<%= form_for(@tarefa) do |f| %>
+    <%= f.label :nome %>
+    <%= f.text_field :nome %><br />
+
+    <%= f.label :prioridade %>
+    <%= f.select :prioridade, ["Alta", "Média", "Baixa"] %><br />
+
+    <%= f.label :finalizada %>
+    <%= f.select :finalizada, options_for_select([["Sim", true], ["Não", false]], @tarefa.finalizada) %><br />
+
+    <%= f.submit "Atualizar", :class => "btn btn-primary" %>
+<% end %>
+<p>
+<%= link_to "Voltar", tarefas_path %>
+</p>

@@ -19,6 +19,20 @@ class TarefasController < ApplicationController
     end
   end
 
+  def edit
+    @tarefa = Tarefa.find(params[:id])
+  end
+
+  def update
+    @tarefa = Tarefa.find(params[:id])
+
+    if @tarefa.update_attributes(params[:tarefa])
+      redirect_to tarefas_path, :notice => "Tarefa atualizada com sucesso!"
+    else
+      render "edit"
+    end
+  end
+
   def destroy
     @tarefa = Tarefa.find(params[:id])
 
