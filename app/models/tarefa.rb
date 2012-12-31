@@ -1,3 +1,3 @@
 class Tarefa < ActiveRecord::Base
-  attr_accessible :prioridade, :pronto, :tarefa
+  attr_accessible :prioridade, :pronto, :nome
 end

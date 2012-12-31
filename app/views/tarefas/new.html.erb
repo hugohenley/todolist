@@ -1,1 +1,11 @@
 <h2>Crie aqui a sua tarefa!</h2>
+
+<%= form_for(@tarefa) do |f| %>
+    <%= f.label :nome %>
+    <%= f.text_field :nome %><br />
+
+    <%= f.label :prioridade %>
+    <%= f.select :prioridade, ["Alta", "Média", "Baixa"]  %><br />
+
+    <%= f.submit "Criar",:class => "btn btn-primary" %>
+<% end %>
