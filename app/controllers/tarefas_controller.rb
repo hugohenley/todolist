@@ -3,6 +3,12 @@ class TarefasController < ApplicationController
 
   def index
     @tarefas = Tarefa.all(:order => "finalizada")
+
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @tarefas.to_xml }
+      format.json { render :json => @tarefas.to_json }
+    end
   end
 
   def new
