@@ -23,3 +23,7 @@ Cenário: Devo ver detalhes das tarefas na tabela caso elas existam
   Então eu devo ver "Tarefa 1" dentro do nome da tarefa
   Então eu devo ver "Alta" dentro da prioridade da tarefa
   Então eu devo ver "Sim" dentro do status da tarefa
+
+Cenário: Devo estar na página de criação de uma tarefa
+  Quando eu clico "Criar"
+  Então eu devo estar na página de criação de uma tarefa

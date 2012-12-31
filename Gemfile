@@ -30,9 +30,6 @@ group :test, :development do
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'capybara'
-end
-
-group :test do
   gem 'cucumber'
   gem 'cucumber-rails'
 end

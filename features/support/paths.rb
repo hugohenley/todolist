@@ -15,6 +15,9 @@ module NavigationHelpers
       when /^página das tarefas$/
       tarefas_path
 
+      when /^página de criação de uma tarefa$/
+      new_tarefas_path
+
 
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:

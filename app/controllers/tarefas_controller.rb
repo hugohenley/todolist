@@ -4,5 +4,8 @@ class TarefasController < ApplicationController
     @tarefas = Tarefa.all
   end
 
+  def new
+    @tarefa = Tarefa.new
+  end
 
 end
