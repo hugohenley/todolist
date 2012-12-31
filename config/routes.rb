@@ -50,8 +50,7 @@ Todolist::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'application#index'
 
-  get 'tarefas' => 'tarefas#index', :as => :tarefas
-  resource :tarefas
+  resources :tarefas
 
 
   # See how all your routes lay out with "rake routes"

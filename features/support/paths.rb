@@ -16,7 +16,7 @@ module NavigationHelpers
       tarefas_path
 
       when /^página de criação de uma tarefa$/
-      new_tarefas_path
+      new_tarefa_path
 
 
       # Add more mappings here.

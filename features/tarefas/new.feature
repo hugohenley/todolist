@@ -17,3 +17,7 @@ Cenário: Não deve ser possível criar uma terafa sem nome
   Quando eu seleciono "Alta" de "tarefa[prioridade]"
   Quando eu aperto "Criar"
   Então eu devo ver "O nome é obrigatório."
+
+Cenário: Devo conseguir voltar para a página que contém a listagem de tarefas
+  Quando eu clico "Voltar"
+  Então eu devo estar na página das tarefas

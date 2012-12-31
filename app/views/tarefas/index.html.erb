@@ -21,12 +21,12 @@
             <td id="nome"><%= tarefa.nome %></td>
             <td id="prioridade"><%= tarefa.prioridade %></td>
             <td id="status"><%= tarefa_pronta?(tarefa) %></td>
-            <td id="editar"><%= link_to "Editar", "#" %></td>
-            <td id="excluir"><%= link_to "Excluir", "#" %></td>
+            <td id="editar"><%= link_to "Editar", "#", :class => "btn btn-primary" %></td>
+            <td id="excluir"><%= link_to "Excluir", tarefa_path(tarefa), :method => "delete", :class => "btn btn-danger", :confirm => "Tem deseja que deseja excluir esta tarefa?" %></td>
           </tr>
 
       <% end %>
     </table>
 <% end %>
 
-<%= link_to "Criar", new_tarefas_path, :class => "btn btn-primary" %>
+<%= link_to "Criar", new_tarefa_path, :class => "btn btn-primary" %>
