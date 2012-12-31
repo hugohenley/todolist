@@ -12,3 +12,8 @@ Cenário: Devo conseguir criar uma tarefa
   Quando eu seleciono "Alta" de "tarefa[prioridade]"
   Quando eu aperto "Criar"
   Então eu devo ver "Tarefa criada com sucesso!"
+
+Cenário: Não deve ser possível criar uma terafa sem nome
+  Quando eu seleciono "Alta" de "tarefa[prioridade]"
+  Quando eu aperto "Criar"
+  Então eu devo ver "O nome é obrigatório."

@@ -1,3 +1,13 @@
+<p>
+  <% if @tarefa.errors.any? %>
+    <ul>
+      <% @tarefa.errors.each do |attr, msg| %>
+          <li><%= msg %></li>
+      <% end %>
+    </ul>
+<% end %>
+</p>
+
 <h2>Crie aqui a sua tarefa!</h2>
 
 <%= form_for(@tarefa) do |f| %>
@@ -5,7 +15,10 @@
     <%= f.text_field :nome %><br />
 
     <%= f.label :prioridade %>
-    <%= f.select :prioridade, ["Alta", "Média", "Baixa"]  %><br />
+    <%= f.select :prioridade, ["Alta", "Média", "Baixa"] %><br />
 
-    <%= f.submit "Criar",:class => "btn btn-primary" %>
+    <%= f.submit "Criar", :class => "btn btn-primary" %>
 <% end %>
+<p>
+<%= link_to "Voltar", tarefas_path %>
+</p>
